@@ -1,0 +1,365 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1440px
++media-breakpoint-down(xl)
+	.defect
+		&-img
+			max-width: 380px
+
+//Large: ≥1200px  max-width: 1439px
++media-breakpoint-down(lg)
+	.defect
+		&-img
+			max-width: 380px
+	.foot
+		&-block
+			&__addr
+				font-size: 14px
+			&__time
+				font-size: 14px
+
+//Medium: ≥992px max-width: 1199px
++media-breakpoint-down(md)
+	.nav
+		&-bg
+			left: calc(25% - 10px)
+	.head
+		&-bg
+			left: calc(25% - 10px)
+		&-ttl
+			padding: 100px 50px
+			&__btn
+				position: relative
+				left: inherit
+				margin-left: 0
+				bottom: inherit
+				margin-top: 40px
+	.selection
+		&-form
+			&__input
+				font-size: 14px
+			&__btn
+				font-size: 14px
+				padding: 15px 20px
+	.defect
+		&-img
+			max-width: 250px
+	.delivery
+		&-images
+			&__img
+				max-width: 130px
+
+//Small: ≥768px max-width: 991px
++media-breakpoint-down(sm)
+	.nav
+		background-color: #f9f9f9
+		&-bg
+			display: none
+		&-list
+			&__item
+				margin-right: 20px
+				a
+					font-size: 16px
+	.head
+		&-bg
+			left: -15%
+			width: 120%
+		&-img
+			margin: 50px 0
+	.selection
+		&-form
+			&__ttl
+				margin-bottom: 40px
+	.about
+		&-ttl
+			padding: 0
+			margin: 0 auto 40px
+			&:before
+				width: 100vw
+			&:after
+				left: -70px
+		&-block
+			margin-bottom: 20px
+		&-video
+			margin-top: 20px
+	.defect
+		position: relative
+		background-image: url(../img/defect_bg.jpg)
+		background-size: cover
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			background: linear-gradient(271.19deg, rgba(28, 26, 26, 0.82) 2.92%, rgba(28, 26, 26, 0) 90.88%)
+			position: absolute
+			left: 0
+			top: 0
+		.container
+			background: none
+			&:before
+				display: none
+		&-img
+			display: none
+		&-ttl
+			margin-top: 0
+		&-txt
+			margin-bottom: 40px
+		&-video
+			min-height: 220px
+	.delivery
+		&-ttl
+			display: table
+			padding: 0
+			margin: 0 auto 20px
+			&:before
+				width: 100vw
+				left: inherit
+				right: 0
+		&-img
+			margin: 0 auto 20px
+		&-images
+			&__img
+				max-width: 175px
+	.foot
+		&-btn
+			margin: 0 auto 40px
+
+//Extra small: ≥576px max-width: 767px
++media-breakpoint-down(xs)
+	.nav
+		&-mobile
+			width: 100%
+			position: fixed
+			top: 0
+			left: 0
+			background-color: #F9F9F9
+			padding: 10px 0
+			z-index: 10
+			&__lang
+				display: table
+				font-family: 18px
+				color: #000
+			&__logo
+				img
+					max-width: 43px
+					margin: 0 auto
+			&__link
+				display: block
+				float: right
+		&-mob
+			padding: 0 10px
+			height: 100%
+			max-height: 0
+			overflow: hidden
+			transition: all ease .3s
+			&.show
+				transition: all ease .3s
+				max-height: 500px
+		&-list
+			display: block
+			margin-bottom: 20px
+			&__item
+				float: none
+				margin-right: 0
+		&-phone
+			float: none
+	.head
+		margin-top: 63px
+		&:before
+			display: none
+		&-ttl
+			padding: 40px 20px 70px
+			&:before
+				content: ''
+				width: calc(100% + 20px)
+				left: -10px
+			&__item
+				font-size: 20px
+				line-height: 1.25
+			&__btn
+				position: absolute
+				bottom: -33px
+				left: 50%
+				margin-left: -140px
+		&-img
+			margin: 0
+		&-item
+			padding: 0
+			padding-left: 30px
+			background-size: 25px 25px
+			background-position: top left
+			font-size: 14px
+			margin-top: 20px
+	.catalog
+		&-ttl
+			font-size: 24px
+		&-slider
+			&__slide
+				outline: none
+			.slick-arrow
+				z-index: 2
+				cursor: pointer
+				font-size: 0
+				width: 53px
+				height: 50px
+				background-size: cover
+				position: absolute
+				top: 50%
+				margin-top: -25px
+				&.slick-prev
+					left: 0px
+					background-image: url(../img/mob-arr_left.svg)
+				&.slick-next
+					right: 0px
+					background-image: url(../img/mob-arr_right.svg)
+	.brands
+		&-ttl
+			font-size: 24px
+	.parts
+		&:before
+			display: none
+		&-ttl
+			font-size: 24px
+		&-slider
+			&__slide
+				outline: none
+			.slick-arrow
+				z-index: 2
+				cursor: pointer
+				font-size: 0
+				width: 53px
+				height: 50px
+				background-size: cover
+				position: absolute
+				top: 50%
+				margin-top: -25px
+				&.slick-prev
+					left: 0px
+					background-image: url(../img/mob-arr_left.svg)
+				&.slick-next
+					right: 0px
+					background-image: url(../img/mob-arr_right.svg)
+		&-item
+			&:last-child
+				margin-bottom: 0
+		&-list
+			&__item
+				padding: 15px
+	.selection
+		.container
+			padding-left: 10px
+			padding-right: 10px
+		&-block
+			&:before
+				left: -10px
+			&__ttl
+				margin-left: 20px
+				font-size: 24px
+				&:after
+					display: none
+			&:after
+				width: 200px
+				height: 60px
+				background-size: cover
+		&-form
+			display: block
+			margin-right: 0
+			&__block
+				margin: 0
+			.rline
+				&:last-child
+					margin-bottom: 20px
+			&__ttl
+				margin: 0
+				margin-bottom: 20px
+	.about
+		&-ttl
+			font-size: 24px
+		&-block
+			margin-top: 0
+			padding-bottom: 0
+			flex-wrap: wrap
+			box-shadow: none
+		&-half
+			width: 50%
+			padding: 0 10px
+			margin-bottom: 20px
+			&:before
+				display: none
+		&-video
+			min-height: 220px
+	.defect
+		&:before
+			background: linear-gradient(271.19deg, rgba(28, 26, 26, 0) 2.92%, rgba(28, 26, 26, 0.82) 90.88%)
+		.container
+			padding: 0 10px
+		&-ttl
+			font-size: 24px
+		&-form
+			flex-wrap: wrap
+			.rline
+				&:last-child
+					margin-bottom: 20px
+			&__btn
+				margin-top: 0
+	.delivery
+		&-ttl
+			font-size: 24px
+		&-images
+			flex-wrap: wrap
+			img
+				max-width: 50%
+	.reviews
+		&-bg
+			&:before
+				left: 0
+		&-ttl
+			font-size: 24px
+		&-item
+			margin: 0 40px
+		&-slider
+			.slick-arrow
+				z-index: 2
+				cursor: pointer
+				font-size: 0
+				width: 53px
+				height: 50px
+				background-size: cover
+				position: absolute
+				top: 50%
+				margin-top: -25px
+				&.slick-prev
+					left: 0px
+					background-image: url(../img/mob-arr_left.svg)
+				&.slick-next
+					right: 0px
+					background-image: url(../img/mob-arr_right.svg)
+	.foot
+		&-ttl
+			font-size: 24px
+		&-block
+			&__subttl
+				&.height
+					min-height: auto
+	.modal
+		padding: 30px 20px
+		.rline
+			width: 100%
+		&_second
+			padding: 30px 20px
+			.modal
+				&-img
+					display: none
+				&-form
+					margin: 0 auto
+					float: none
+	.row-xs
+		display: block
+
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+
